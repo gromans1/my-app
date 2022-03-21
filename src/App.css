@@ -1,0 +1,75 @@
+/**App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}**/
+
+.app-wrapper{
+  width:1200 px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+  "h h" /** первая строка - займу 2 колонки **/
+  "n c"; /** вторая строка - nav займет 1 колонку, content займет 2 колонку **/
+  grid-auto-rows: 60px 1fr;
+  /** глобально у нас 2 строки - хедер и остальной контент. Первая строка 60 пикселей,
+  а остальное это 1 фракция **/
+  grid-auto-columns: 2fr 10fr;
+  /** глобально у нас 2 колонки. всего 12 фракций. Певая колонка займет 2, вторая 10 **/
+  /** grid-gap: ; расстояние между элементами **/
+
+
+}
+
+.header{
+  grid-area: h;
+  background-color: green;
+}
+
+.header img{
+  width: 20px; /*если в хедере лежит img сделей ей ширина 20 пикселей*/
+}
+
+.nav{
+  grid-area: n;
+  background-color: burlywood;
+
+}
+
+.content{
+  grid-area: c;
+  background-color: cornflowerblue;
+}

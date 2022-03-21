@@ -1,0 +1,84 @@
+Компонента - это функция, возвращающая разметку JSX
+
+
+const Hider = function () {
+return (
+<div>
+<a href="#">home</a>
+<a href="#">feed</a>
+</div>);
+}
+
+<--! стрелочная функция -->
+const Hider = () => {
+return (
+<div>
+<a href="#">home</a>
+<a href="#">feed</a>
+</div>);
+}
+Чтобы вызвать написать <Hider/> вызывается в любом месте проекта
+Наша компонента <Hider/> это отдельный тег. Пишется с бол ьшой буквы
+
+Чтобы состлаться на файл надо прописать
+
+  import openGoogle frome './'; *импорт начиается с той папки в которой я нахожусь
+                            './../google.js'; на папку вверх
+                            './название папки/google.js'
+
+  import openYandex frome './Yandex.js'; т.к. Yandex.js лежит в той же папке
+
+Чтобы функцию можно было импортировать в ней должно быть условие export
+  let openGoogle = () =>{
+    //connect to google
+    // show mep
+  }
+  export default openGoogle;
+
+Footer.js
+import React from 'react'; // нет ./ т.к. это ссылка на библтотеку из папки node_modules
+
+const Footer = () => {
+return (
+<div>
+    <a href ='#s'>Home</a> -
+    <a href ='#s'>New Feed</a> -
+    <a href ='#s'>Messages</a> -
+</div>
+);
+}
+export default Footer;
+
+
+Header.js
+import React from 'react'; // нет ./ т.к. это ссылка на библтотеку из папки node_modules
+
+const Header = () => {
+return (
+<div>
+    <a href ='#s'>Home</a> -
+    <a href ='#s'>New Feed</a> -
+    <a href ='#s'>Messages</a> -
+</div>
+
+);
+}
+export default Header;
+
+Technologies.js
+import React from 'react'; // нет ./ т.к. это ссылка на библтотеку из папки node_modules
+
+const Technologies = () => {
+return (
+<div>
+    <ul>
+        <li>css</li>
+        <li>html</li>
+        <li>js</li>
+        <li>react</li>
+    </ul>
+</div>
+
+);
+}
+export default Technologies;
