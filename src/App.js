@@ -28,9 +28,9 @@
 import React from 'react'; // нет ./ т.к. это ссылка на библтотеку из папки node_modules
 import './App.css';
 
-import Header from './components/Header';
-import Navbar from "./components/Navbar";
-import Profile from "./components/Profile";
+import Header from './components/Header/Header';
+import Navbar from "./components/Navbar/Navbar";
+import Profile from "./components/Profile/Profile";
 
 //import Header from './Header';
 //import Technologies from './Technologies';
