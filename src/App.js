@@ -27,21 +27,22 @@
 
 import React from 'react'; // нет ./ т.к. это ссылка на библтотеку из папки node_modules
 import './App.css';
+
 import Header from './components/Header';
-import Nav from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
+
 //import Header from './Header';
 //import Technologies from './Technologies';
 //import Footer from "./Footer";
+
 
 const App = () => {
   return (
     <div className='app-wrapper'>
         <Header />
-        <Nav />
+        <Navbar />
         <Profile />
-
-
     </div>);
 }
 export default App;
