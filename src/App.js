@@ -1,4 +1,3 @@
-
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -25,24 +24,41 @@
 
 // export default App;
 
-import React from 'react'; // нет ./ т.к. это ссылка на библтотеку из папки node_modules
+import React from 'react';
 import './App.css';
 
 import Header from './components/Header/Header';
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
+import Dialogs from "./components/Dialogs/Dialogs";
+import {BrowserRouter, Route, Routes, Switch} from "react-router-dom";
 
 //import Header from './Header';
 //import Technologies from './Technologies';
 //import Footer from "./Footer";
 
 
-const App = () => {
-  return (
-    <div className='app-wrapper'>
-        <Header />
-        <Navbar />
-        <Profile />
-    </div>);
+const App = (props) => {
+    return (
+        <BrowserRouter>
+
+            <div className='app-wrapper'>
+                <Header/>
+                <Navbar/>
+
+                <div className='app-wrapper-content'> {/*вынесли общую части css - избежать дублирования кода*/}
+
+                    <Routes>
+                        <Route path="/" element={<App />} />
+                        <Route path='/profile' element={<Profile/>} />
+                        <Route path='/dialogs/*' element={<Dialogs/>} />
+                    </Routes>
+                    {/*<Profile />*/}
+                    {/*<Dialogs/>*/}
+                </div>
+            </div>
+
+        </BrowserRouter>
+    )
 }
 export default App;

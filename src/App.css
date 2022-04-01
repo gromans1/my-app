@@ -37,24 +37,34 @@
   }
 }**/
 
-.app-wrapper{
-  width:1200 px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas:
+.app-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
   "h h" /** первая строка - займу 2 колонки **/
   "n c"; /** вторая строка - nav займет 1 колонку, content займет 2 колонку **/
-  grid-auto-rows: 60px 1fr;
-  /** глобально у нас 2 строки - хедер и остальной контент. Первая строка 60 пикселей,
-  а остальное это 1 фракция **/
-  grid-auto-columns: 2fr 10fr;
-  /** глобально у нас 2 колонки. всего 12 фракций. Певая колонка займет 2, вторая 10 **/
-  /** grid-gap: ; расстояние между элементами **/
+    grid-auto-rows: 60px 1fr;
+    /** глобально у нас 2 строки - хедер и остальной контент. Первая строка 60 пикселей,
+    а остальное это 1 фракция **/
+    grid-auto-columns: 2fr 10fr;
+    /** глобально у нас 2 колонки. всего 12 фракций. Певая колонка займет 2, вторая 10 **/
+    /** grid-gap: ; расстояние между элементами **/
 
 
 }
 
+.app-wrapper-content{
+    grid-area: c;
+    background-color: cornflowerblue;
+}
+.app-wrapper-content img{
+  width: 1000px;
+  margin: 0 auto;
+  height: 700px;
 
+
+}
 
 
 

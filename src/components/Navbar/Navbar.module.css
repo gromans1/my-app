@@ -2,13 +2,21 @@
 .nav{
     grid-area: n;
     background-color: burlywood;
+    padding: 20px;
 
 }
 
-.item{
-    color: azure;
+.item a{
+    color: white;
+    text-decoration: none;
 }
 
-.active{
-    color: darkorange;
+/*.item a.active{
+    color: black;
+    text-decoration: none;
+}*/
+
+.item a.active{
+    color: black;
+    font-weight: ;
 }

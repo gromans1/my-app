@@ -115,3 +115,28 @@ console.log(props.messege)
 или
 тег debugger; в месте вопросов и f12 в браузере
 
+Закомментировать элемент левый ctrl + правый Shift + точка слева от shift
+Выровнять код ctrl+a   +  ctrl+l
+
+
+маршрутизатор
+B:\1react-project\my-app>npm i react-router-dom -save
+
+-save чтобы внес запись в пекедж джейсон
+
+удалить npm uninstall react-router-dom
+
+активный пункт меню
+<NavLink to="/profile" style={({ isActive }) =>({color: isActive ? 'green' : 'blue'})}>Profile</NavLink>
+</div>
+или
+const setActive = ({ isActive }) =>(isActive ? " active" : "");
+class Nav extends React.Component{
+render(){
+return <nav>
+    <NavLink to="/" className={setActive}>Главная</NavLink>
+    <NavLink to="/about" className={setActive}>О сайте</NavLink>
+    <NavLink to="/products" className={setActive}>Товары</NavLink>
+</nav>;
+}
+}
