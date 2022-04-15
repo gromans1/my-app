@@ -1,11 +1,30 @@
 import React from 'react';
-import classes from './../Dialogs.module.css'
-
+import classes from './Message.module.css'
 
 
 const Message = (props) => {
-    return (<div className={classes.messages}>{props.message}</div>
-    );
-};
 
-export default Message;
+    let newMessageElement = React.createRef();
+    let addMessage = () => {
+    let text = newMessageElement.current.value;
+        { alert(text);
+        }
+    };
+
+
+
+    return (
+        <div>
+            <div className={classes.message}>{props.message}</div>
+            <div>
+                <textarea ref={newMessageElement}></textarea>
+            </div>
+            <div>
+               <button onClick={addMessage}>Add post</button>
+               <button>Remove</button>
+        </div>
+        </div>
+            );
+            };
+
+            export default Message;

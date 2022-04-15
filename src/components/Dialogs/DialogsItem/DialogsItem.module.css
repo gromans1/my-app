@@ -1,0 +1,25 @@
+
+
+.dialogsItems{
+    padding: 10px;
+    grid-area: i;
+
+
+}
+
+/*.dialogsItems .active{
+    color: gold;
+
+}
+*/
+
+.dialogsItems a{
+    text-decoration: none;
+}
+
+.dialogsItems img {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    padding-right: 10px;
+}

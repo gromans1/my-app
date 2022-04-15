@@ -8,9 +8,33 @@ const MyPosts = (props) => {
         {id: 1, message: 'Hi, how are you', likesCount: '20'},
         {id: 2, message: 'Hi', likesCount: '30'}
     ];*/
-
     let postsElements =
         props.posts.map ((p) => <Post key={p.id} message={p.message} likesCount={p.likesCount} />);
+
+
+
+    /*нативный пример js. НО в реакте нельзя воздействовать на DOM  напрямую - document.getElementById
+    , это делает реакт мы работаем с Virtual DOM*/
+  /*  let addPost = () => {
+        let text = document.getElementById('new-post').value;
+        alert(text);
+    }*/
+   /* <textarea id='new-post'></textarea>*/
+/*    <button onClick={addPost}>Add post</button>*/
+
+ /*     let newPostElement = React.createRef();
+        let addPost = () => {
+       /!* debugger;*!/
+        let text = newPostElement.current.value;
+        { alert(text);
+        }
+    };*/
+        let newPostElement = React.createRef();
+        let addPost = () => {
+        let text = newPostElement.current.value;
+        props.addPost(text);
+        newPostElement.current.value = ''; // зануляем. делаем пустое техтэриа после ввода текста 
+    };
 
 
 
@@ -18,11 +42,16 @@ const MyPosts = (props) => {
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea></textarea>
+                    <textarea ref={newPostElement}></textarea>
                 </div>
                 <div>
-                    <button>Add post</button>
-                    <button>Remove</button>
+                    <button onClick={addPost}>Add post</button>
+                    <button >Remove</button>
+                  {/*  <button onClick={() =>{alert('')}}>Add post</button>
+                    <button onClick={() =>{alert('')}}>Remove</button>*/}
+
+
+
                 </div>
             </div>
             <div className={classes.posts}>

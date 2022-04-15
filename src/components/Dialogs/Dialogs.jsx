@@ -9,10 +9,11 @@ const Dialogs = (props) => {
 
 
     let dialogsElements = props.dialogsData
-        .map( ( dialog) => <DialogsItem name={dialog.name} key={dialog.id}/> );
+        .map( ( dialog) => <DialogsItem img={dialog.img} name={dialog.name} id={dialog.id} key={dialog.id}/> );
 
+   /* так правильо писать */
     let messagesElements = props.messages
-        .map((m) =>  <Message message ={m.message} key={m.id} />);
+        .map((m) =>  <Message message ={m.message} id={m.id} key={m.id} />);
 
 
     {/*   [ <div>
@@ -36,7 +37,8 @@ const Dialogs = (props) => {
 
             </div>
 
-            <div className={classes.messages}>
+          {/*  <div className={classes.messages}>*/}
+                <div>
                 <ul>{messagesElements}</ul>
                {/* <Message message={messages[0].message} id={messages[0].id}/>
                 <Message message={messages[1].message} id={messages[1].id}/>
